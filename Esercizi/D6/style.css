@@ -1,0 +1,101 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+    /*    content    */
+.container {
+    position: relative;
+    width: 380px;
+    height: 537px;
+    /*overflow: hidden*/
+    border-radius: 20px;
+}
+.box {
+    position: absolute;
+    /*background-color: black;*/
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.6;
+}
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.save {
+    background-color: red;
+    z-index: -3;
+    width: 45px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    position: absolute;
+    top: 18px;
+    right: 30px;
+}
+.icone {
+    width: 50%;
+    padding: 0.4rem;
+    background-color: #D5D3D1;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 17px;
+    left: 9px;
+    z-index: -3;
+    
+}
+.download {    
+    width: 10%;
+    padding: 0.4rem;
+    background-color: #D5D3D1;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 17px;
+    right: 90px;
+    z-index: -3;
+    font-weight: bold;
+}
+.puntini {    
+    width: 10%;
+    padding: 0.4rem;
+    background-color: #D5D3D1;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 17px;
+    right: 22px;
+    z-index: -3;
+    font-weight: bold;
+    transition: bottom 2s ;
+}
+    /*   hover  */
+.container:hover .box {
+    background-color: black;
+    opacity: 0.4;
+}
+.container:hover .save {
+    z-index: 3;
+}    
+.container:hover .icone {
+    z-index: 3;
+}    
+.container:hover .download {
+    z-index: 3;
+}    
+.container:hover .puntini {
+    z-index: 3;
+    
+}    
+    
+
