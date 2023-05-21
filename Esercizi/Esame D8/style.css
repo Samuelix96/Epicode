@@ -1,0 +1,336 @@
+/* al p degli articoli display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin-left: 3.3rem;
+}
+
+main {
+  margin-top: 5rem;
+  display: flex;
+
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* header */
+
+/*  .container-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; */
+
+
+.container-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+nav h1 {
+  width: 10%;
+  margin-left: 53px;
+}
+
+nav h1 img {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 12px;
+
+}
+
+nav ul li a {
+  text-decoration: none;
+}
+
+nav ul li a button {
+  border-radius: 20px;
+  padding: 4px 6px;
+  font-size: 10px;
+}
+
+nav ul li a span {
+  background-color: rgb(226, 93, 52);
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+}
+
+
+/*       Main     */
+
+.img2 {
+  margin-left: 153px;
+  width: 125px;
+}
+
+.img3 {
+  margin-left: 217px;
+  width: 125px;
+}
+
+.img4 {
+  margin-left: 152px;
+  width: 125px;
+}
+
+.img5 {
+  margin-left: 117px;
+  width: 125px;
+}
+
+.img6 {
+  margin-left: 180px;
+  width: 125px;
+}
+
+
+.box-head {
+  margin-bottom: 3rem;
+}
+
+.title h2 {
+  font-size: 17px;
+}
+
+.title p {
+  font-size: 14px;
+  color: #6A6A6A;
+  margin-top: 0.5rem;
+}
+
+.pre-title ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 16px;
+}
+
+.box-container {
+  width: 60%;
+  margin-right: 3rem;
+}
+
+.img-box img {
+  width: 125px;
+  object-fit: cover;
+
+}
+
+.info-title ul li {
+  list-style-type: none;
+  display: inline-block;
+  font-size: 12px
+}
+
+.box-body {
+  display: flex;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.title {
+  margin-top: 1rem;
+}
+
+
+
+
+
+
+/*     Aside      */
+
+.general {
+  padding: 3rem;
+}
+
+
+.left-cont {
+  width: 40%;
+  border-left: 2px solid;
+}
+
+.icons-side img {
+  width: 1.4rem;
+
+}
+
+.icons-side ul li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.icons-side ul {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+
+.footer ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 12px;
+}
+
+.aside-text {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+.maybe {
+  text-align: center;
+  margin-top: 1rem;
+
+}
+
+.maybe ul li {
+  list-style-type: none;
+}
+
+.twitter {
+  text-align: center;
+  margin-top: 1rem;
+
+}
+
+.twitter a button {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.foot-end ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 12px;
+
+}
+
+.foot-end ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.body-box3 ul li {
+  list-style-type: none;
+  display: inline-block;
+  background-color: #dcdbdb;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 3px;
+  margin-top: 1rem;
+
+}
+
+.body-box3 {
+  margin-top: 1rem;
+}
+
+.body-box3 ul li a {
+  text-decoration: none;
+  color: black;
+
+}
+
+.aside-card div>img {
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.aside-body span {
+  font-weight: bold;
+}
+
+.box-card {
+  margin-top: 2rem;
+}
+
+.aside-card {
+  margin-top: 2rem;
+}
+
+.aside-card .rel {
+  position: relative;
+}
+
+.aside-card h4 {
+  position: absolute;
+  top: -43px;
+  left: 45px;
+}
+
+.aside-card p {
+  position: absolute;
+  top: -17px;
+  left: 45px;
+  color: #6A6A6A;
+}
+
+.aside-card button {
+  position: absolute;
+  top: -29px;
+  right: 0;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.end {
+  margin-top: 4rem;
+
+}
+
+.end div {
+  margin-top: 2rem;
+}
+
+.end div>h4 {
+  font-weight: bold;
+}
+
+.end div p {
+  color: #4C8535;
+}
+
+.end-icons {
+  display: flex;
+
+}
+
+.end-icons p {
+  margin-left: 0.5rem;
+
+
+}
