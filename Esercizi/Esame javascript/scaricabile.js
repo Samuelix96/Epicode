@@ -124,86 +124,106 @@ const jobs = [
   },
 
 ]
+console.log(jobs)
+
+
+//  alternativa
+/* 
+    let titoloAttuale = jobs[i].title.toLowerCase();
+    let lavoroAttuale = jobs[i].location.toLowerCase();
+    let titoloPiccolo = titolo.toLowerCase();
+    let locationPiccolo = luogo.toLowerCase();
+    console.log(titoloAttuale, lavoroAttuale, titoloPiccolo, locationPiccolo);
+    if (titoloAttuale.includes(titoloPiccolo) && lavoroAttuale.includes(locationPiccolo)) {
+      result.push(jobs[i])
+      count++
+    }
+  }
+  return {result, count} */
+ 
 
 
 
 function cercaTitoloELavoro(titolo, luogo) {
-  let risultato = {
-    result: [],
-    count: 0,
-  }
-  for (let i = 0; i < jobs.length; i++) {
 
-    let titoloAttuale = jobs[i].title.toLowerCase();
-    let lavoroAttuale = jobs[i].location.toLowerCase();
-    let titoloPiccolo = titolo.toLowerCase();
-    let locationPiccolo = luogo.toLowerCase()
-    console.log(titoloAttuale, lavoroAttuale, titoloPiccolo, locationPiccolo);
-    if (titoloAttuale.includes(titoloPiccolo) && lavoroAttuale.includes(locationPiccolo)) {
-      risultato.result.push(jobs[i])
-      risultato.count++
-    }
-  }
-  return risultato
+    result = [],
+    count = 0
 
-
-  /* for (let i = 0; i < jobs.length; i++) {
+   for (let i = 0; i < jobs.length; i++) {
     
-    if (jobs[i].title.toLowerCase().includes(titolo.toLowerCase()) && jobs[i].location.toLowerCase().includes(locazione.toLowerCase())) {
+    if (jobs[i].title.toLowerCase().includes(titolo.toLowerCase()) && jobs[i].location.toLowerCase().includes(luogo.toLowerCase())) {
 
-      risultato.result.push(`${jobs[i].title}, ${jobs[i].location}`)
-      risultato.count++
+      result.push(`${jobs[i].title}, ${jobs[i].location}`)
+      count++
     }
-  } return risultato
- */
-
-
+  } return {result,count}
+ 
 }
 console.log(cercaTitoloELavoro('dev', 'Us'))
 
 
 //Seconda parte
 
-//dichiaro i valori di title e location
-let titolInput = document.getElementById('titol');
-let localInput = document.getElementById('local');
-
 // sto dichiarando tutto il form per gestirlo con onsubmit
 let form = document.querySelector('form');
-let butt = document.querySelector('button');
-let ul = document.querySelector('ul');
 let parag = document.querySelector('p');
-let titol = titolInput.value;
-let local = localInput.value;
-let insieme = cercaTitoloELavoro(titol, local);
+
+
+/* 
+const prova = new Vue();({
+  el: '#prova',
+  data: {
+    risulta: ''
+  },
+  methods: {
+    caloloRis: function () {
+      for (let i = 0; i < insieme.result.length; i++) {
+        console.log(insieme.result[i])
+        let ris = insieme.result[i];
+        ul.innerHTML += `<li> ${ris.title} , ${ris.location} </li>`;
+        if (titol === 'dev' || local === 'us') {
+          e.preventDefault()
+          console.log(e.preventDefault)
+          parag.innerText = 'Sei promosso'
+          this.risultato = 'giusto ';
+
+        }
+
+      }
+    }
+  }
+
+});
+ */
 
 
 
-titolInput.onfocus = function () {
-  console.log('sei dentro nell input di title')
-}
+function cerca(e) {
+  e.preventDefault()
+  
+  //dichiaro i valori di title e location
+  let titolInput = document.getElementById('titol').value;
+  let localInput = document.getElementById('local').value;
+  let ul = document.querySelector('ul');
+  ul.innerHTML = '';
+  let total = cercaTitoloELavoro(titolInput,localInput);
+  console.log(total)
+ 
+  
 
-localInput.onfocus = function() {
-  console.log('sei dentro nell input di location')
-}
-
-butt.onclick = function (e) {
-
-  for (let i = 0; i < insieme.result.length; i++) {
-    console.log(insieme.result[i])
-    let ris = insieme.result[i];
-    ul.innerHTML += `<li> ${ris.title} , ${ris.location} </li>`;
-    if (titol === 'dev' || local === 'us') {
-      e.preventDefault()
-      console.log(e.preventDefault)
+  for (let i = 0; i < total.result.length; i++) {
+    console.log(total.result[i])
+    let ris = total.result[i];
+    ul.innerHTML += `<li> ${ris} </li>`;
+    if (titolInput ==='dev' && localInput === 'us' ) {
       parag.innerText = 'Sei promosso'
     } else {
-      e.preventDefault()
-      parag.innerText = 'hai cannato'
+      parag.innerText = 'RIPROVA SARAI PIÙ FORTUNATO ☠️'
     }
   }
 }
 
+document.getElementById('cerca').addEventListener('click', cerca)
 
 
 
